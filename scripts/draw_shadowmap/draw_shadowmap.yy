@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_shadowmap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_shadowmap",
+  "parent":{
+    "name":"3DTutorial82DeferredRenderingShadows",
+    "path":"3DTutorial82DeferredRenderingShadows.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
