@@ -166,6 +166,7 @@ application_surface_draw_enable(false);
 
 self.gbuff_diffuse = -1;
 self.gbuff_normal = -1;
+self.gbuff_shadows = -1;
 
 self.surf_combine = -1;
 
