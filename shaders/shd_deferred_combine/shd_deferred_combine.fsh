@@ -3,6 +3,7 @@ varying vec4 v_vColour;
 
 uniform sampler2D samp_depth;
 uniform sampler2D samp_normal;
+uniform sampler2D samp_shadows;
 
 uniform float u_znear;
 uniform float u_zfar;
@@ -28,6 +29,7 @@ void main()
     vec4 color_diffuse = texture2D(gm_BaseTexture, v_vTexcoord);
     float color_depth = texture2D(samp_depth, v_vTexcoord).r;
     vec3 color_normal = texture2D(samp_normal, v_vTexcoord).rgb;
+    float color_shadow = texture2D(samp_shadows, v_vTexcoord).r;
     
     vec3 fragment_normal = (color_normal - 0.5) * 2.0;
     float linear_depth = LinearizeDepth(color_depth, u_znear, u_zfar);
@@ -56,6 +58,14 @@ void main()
     
     // light end
     vec3 final_color = color_diffuse.rgb * light_total;
+    
+    
+    
+    
+    if (color_shadow == 1.0) {
+        final_color *= 0.5;
+    }
+    
     
     
     

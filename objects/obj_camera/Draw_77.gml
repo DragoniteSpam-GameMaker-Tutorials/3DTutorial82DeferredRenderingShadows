@@ -3,8 +3,10 @@ surface_set_target(self.surf_combine);
 
 var sampler_depth = shader_get_sampler_index(shd_deferred_combine, "samp_depth");
 var sampler_normal = shader_get_sampler_index(shd_deferred_combine, "samp_normal");
+var sampler_shadow = shader_get_sampler_index(shd_deferred_combine, "samp_shadows");
 texture_set_stage(sampler_depth, surface_get_texture_depth(self.gbuff_diffuse));
 texture_set_stage(sampler_normal, surface_get_texture(self.gbuff_normal));
+texture_set_stage(sampler_shadow, surface_get_texture(self.gbuff_shadows));
 
 var u_znear = shader_get_uniform(shd_deferred_combine, "u_znear");
 var u_zfar = shader_get_uniform(shd_deferred_combine, "u_zfar");
