@@ -42,7 +42,10 @@ draw_3d_transparency();
 
 
 draw_surface(self.surf_combine, 0, 0);
-
+/*
 draw_surface_ext(self.gbuff_diffuse, 0, 0, 0.25, 0.25, 0, c_white, 1);
 draw_surface_ext(self.gbuff_normal, 0, 180, 0.25, 0.25, 0, c_white, 1);
 draw_surface_ext(self.gbuff_shadows, 0, 360, 0.25, 0.25, 0, c_white, 1);
+*/
+
+if (current_minute % 2 == 0) draw_surface(gbuff_shadows, 0, 0);

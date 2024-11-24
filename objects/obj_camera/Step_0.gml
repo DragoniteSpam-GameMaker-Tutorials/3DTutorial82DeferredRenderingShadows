@@ -1,7 +1,7 @@
 /// @description Insert description here
 
 with (self.player) {
-    if (self.mouse_lock) {
+    if (window_mouse_get_locked()) {
         #region regular movement
         self.direction -= window_mouse_get_delta_x() / 10;
         self.pitch -= window_mouse_get_delta_y() / 10;
@@ -71,6 +71,6 @@ with (self.player) {
     }
     
     if (keyboard_check_pressed(vk_tab)) {
-        self.mouse_lock = !self.mouse_lock;
+        window_mouse_set_locked(!window_mouse_get_locked());
     }
 }

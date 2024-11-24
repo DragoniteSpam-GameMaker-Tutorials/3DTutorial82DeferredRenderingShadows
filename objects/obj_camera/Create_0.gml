@@ -5,7 +5,7 @@ vertex_format_add_texcoord();
 vertex_format_add_colour();
 self.format = vertex_format_end();
 
-show_debug_overlay(true);
+//show_debug_overlay(true);
 
 #region floor
 var x1 = -10000;

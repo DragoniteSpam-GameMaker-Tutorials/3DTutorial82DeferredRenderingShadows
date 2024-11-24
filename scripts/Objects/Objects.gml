@@ -45,7 +45,6 @@ function PlayerObject() constructor {
     self.pitch = -30;
     self.face_direction = 180;
     self.distance = 40;
-    self.mouse_lock = true;
     self.frame = 0;
     self.is_ghost = false;
 };
